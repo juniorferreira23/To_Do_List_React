@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    padding: 10px 0;
+}
+
+.App{
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+}
+
+.TodoForm {
+    margin: 15px 0;
+}
+
+.TodoForm input {
+    padding-left: 5px;
+}
+
+.TodoForm button {
+    padding: 0 5px;
+}
+
+.TodoList li {
+    margin-top: 5px;
+    list-style-position: inside;
+}
+
+.trash-icon, .check-icon {
+    margin-left: 10px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+.trash-icon img, .check-icon img {
+    width: 20px;
+}
