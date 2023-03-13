@@ -10,13 +10,15 @@ const TodoList = (props) => {
       <ul className="TodoList">
         {props.tasks.map((task) => <li key={task.id} className={task.done ? "check" : "" }> {task.text}
 
-            <button className="trash-icon" onClick={() => props.onDeleteTask(task.id)}>
-              <img alt="trashcan-icon" src="https://img.icons8.com/material-rounded/24/null/delete.png"/>
-            </button>
+            <div className="task-options">
+              <button className="trash-icon" onClick={() => props.onDeleteTask(task.id)}>
+                <img alt="trashcan-icon" src="https://img.icons8.com/material-rounded/24/null/delete.png"/>
+              </button>
 
-            <button className="check-icon" onClick={() => props.oncheckCompletion(task)}>
-              <CheckStatus done={task.done}></CheckStatus>
-            </button>                
+              <button className="check-icon" onClick={() => props.oncheckCompletion(task)}>
+                <CheckStatus done={task.done}></CheckStatus>
+              </button>   
+            </div>             
 
           </li>)}
       </ul>

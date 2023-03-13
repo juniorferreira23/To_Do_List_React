@@ -31,9 +31,11 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1>To Do List</h1>
+      <header><h1>Web To Do List</h1></header>
+      <div className='container'>
       <TodoForm onAddTask={onAddTask}></TodoForm>
       <TodoList tasks={tasks} onDeleteTask={onDeleteTask} oncheckCompletion={oncheckCompletion}></TodoList>
+      </div>
     </div>
   );
 }

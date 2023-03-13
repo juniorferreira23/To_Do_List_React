@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,34 +6,60 @@
 
 html, body {
     height: 100%;
-    padding: 10px 0;
 }
 
-.App{
+.App header {
+    background-color: #a272b9;
+    text-align: center;
+    color: white;
+}
+
+.container  {
     width: 100%;
     max-width: 900px;
     margin: auto;
 }
 
 .TodoForm {
-    margin: 15px 0;
+    margin: 30px 20px;
+    display: flex;
+    align-items: center;
 }
 
 .TodoForm input {
+    width: 100%;
+    max-width: 300px;
+    height: 30px;
     padding-left: 5px;
 }
 
 .TodoForm button {
-    padding: 0 5px;
+    padding: 5px 10px;
+    background-color: #a272b9;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.TodoList {
+    margin: 30px 20px;
 }
 
 .TodoList li {
-    margin-top: 5px;
-    list-style-position: inside;
+    margin-top:10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.task-options {
+    /* margin-right: 100px; */
 }
 
 .trash-icon, .check-icon {
-    margin-left: 10px;
+    margin-left: 20px;
     border: none;
     background-color: white;
     cursor: pointer;
