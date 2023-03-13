@@ -42,3 +42,7 @@ html, body {
 .trash-icon img, .check-icon img {
     width: 20px;
 }
+
+.check {
+    text-decoration: line-through;
+}

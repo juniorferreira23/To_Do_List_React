@@ -8,7 +8,7 @@ const TodoList = (props) => {
 
     return (
       <ul className="TodoList">
-        {props.tasks.map((task) => <li key={task.id}>{task.text}
+        {props.tasks.map((task) => <li key={task.id} className={task.done ? "check" : "" }> {task.text}
 
             <button className="trash-icon" onClick={() => props.onDeleteTask(task.id)}>
               <img alt="trashcan-icon" src="https://img.icons8.com/material-rounded/24/null/delete.png"/>
