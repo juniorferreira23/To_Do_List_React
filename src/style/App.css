@@ -34,7 +34,7 @@ html, body {
 }
 
 .TodoForm button {
-    padding: 5px 10px;
+    padding: 7px 12px;
     background-color: #a272b9;
     color: white;
     border: none;
@@ -48,18 +48,37 @@ html, body {
 }
 
 .TodoList li {
-    margin-top:10px;
+    list-style: none;
+}
+
+.check {
+    text-decoration: line-through;
+}
+
+.card {
+    margin-top: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    box-shadow: -1px 1px 5px 0.5px #a272b9;
+    padding: 10px;
+    font-size: 17px;
 }
 
-.task-options {
-    /* margin-right: 100px; */
+.task-text {
+    width: 80%;
+    overflow-wrap: break-word;
+}
+
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 70px;
 }
 
 .trash-icon, .check-icon {
-    margin-left: 20px;
     border: none;
     background-color: white;
     cursor: pointer;
@@ -69,6 +88,13 @@ html, body {
     width: 20px;
 }
 
-.check {
-    text-decoration: line-through;
+
+@media screen and (max-width: 500px)  {
+    .card {
+        flex-direction: column;
+    }
+
+    .btns {
+        margin-top: 20px;
+    }
 }

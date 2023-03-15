@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import './App.css';
-import Task from './TaskModel';
-import TodoForm from './Todoform';
-import TodoList from './TodoList';
+import './style/App.css';
+import Task from './model/TaskModel';
+import TodoForm from './components/Todoform';
+import TodoList from './components/TodoList';
 
 const App = () => {
   
