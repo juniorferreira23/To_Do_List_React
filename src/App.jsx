@@ -1,12 +1,29 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './style/App.css';
 import Task from './model/TaskModel';
 import TodoForm from './components/Todoform';
 import TodoList from './components/TodoList';
 
+const SAVED_TASKS = 'savedTasks'
+
 const App = () => {
   
   const [tasks, setTask] = useState([])
+
+  useEffect(() => {
+    let savedTasks = JSON.parse(localStorage.getItem(SAVED_TASKS))
+    console.log(savedTasks)
+    if(savedTasks && savedTasks.length !== 0){
+      setTask(savedTasks)
+      console.log('entrou')
+    }
+    console.log('verificando')
+  },[])
+
+  useEffect(() => {
+    localStorage.setItem(SAVED_TASKS, JSON.stringify(tasks))
+    console.log('teste')
+  },[tasks])
 
   const onAddTask = (text) => {
     setTask([...tasks, new Task(text)])
