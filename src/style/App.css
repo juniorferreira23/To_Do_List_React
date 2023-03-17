@@ -12,6 +12,7 @@ html, body {
     background-color: #a272b9;
     text-align: center;
     color: white;
+    padding: 10px 0;
 }
 
 .container  {
@@ -87,7 +88,6 @@ html, body {
 .trash-icon img, .check-icon img {
     width: 20px;
 }
-
 
 @media screen and (max-width: 500px)  {
     .card {
