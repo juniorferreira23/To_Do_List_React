@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './style/App.css';
-import Task from './model/TaskModel';
+import Task from './model/TaskModel.js';
 import TodoForm from './components/Todoform';
 import TodoList from './components/TodoList';
+import ButtonModal from './components/ButtonModal'
 
 const SAVED_TASKS = 'savedTasks'
 
@@ -12,17 +13,13 @@ const App = () => {
 
   useEffect(() => {
     let savedTasks = JSON.parse(localStorage.getItem(SAVED_TASKS))
-    console.log(savedTasks)
     if(savedTasks && savedTasks.length !== 0){
       setTask(savedTasks)
-      console.log('entrou')
     }
-    console.log('verificando')
   },[])
 
   useEffect(() => {
     localStorage.setItem(SAVED_TASKS, JSON.stringify(tasks))
-    console.log('teste')
   },[tasks])
 
   const onAddTask = (text) => {
@@ -52,6 +49,7 @@ const App = () => {
       <div className='container'>
       <TodoForm onAddTask={onAddTask}></TodoForm>
       <TodoList tasks={tasks} onDeleteTask={onDeleteTask} oncheckCompletion={oncheckCompletion}></TodoList>
+      <ButtonModal></ButtonModal>
       </div>
     </div>
   );
