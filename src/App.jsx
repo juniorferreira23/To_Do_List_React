@@ -4,6 +4,7 @@ import Task from './model/TaskModel.js';
 import TodoForm from './components/Todoform';
 import TodoList from './components/TodoList';
 import ButtonModal from './components/ButtonModal'
+import Modal from './components/Modal';
 
 const SAVED_TASKS = 'savedTasks'
 
@@ -50,6 +51,7 @@ const App = () => {
       <TodoForm onAddTask={onAddTask}></TodoForm>
       <TodoList tasks={tasks} onDeleteTask={onDeleteTask} oncheckCompletion={oncheckCompletion}></TodoList>
       <ButtonModal></ButtonModal>
+      <Modal></Modal>
       </div>
     </div>
   );

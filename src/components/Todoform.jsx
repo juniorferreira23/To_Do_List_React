@@ -19,7 +19,7 @@ const TodoForm = (props) => {
     return (
       <form className="TodoForm">
         <input id="teste" type="text" placeholder='Task' onChange={hadleChange} value={text}></input>
-        <button onClick={(event) => addTask(event)}>submit</button>
+        <button className="btn-submit" onClick={(event) => addTask(event)}>submit</button>
       </form>
     )
   }
