@@ -89,6 +89,20 @@ html, body {
     width: 20px;
 }
 
+.button-modal {
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    width: 70px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #a272b9;
+    color: white;
+    font-weight: bold;
+}
+
 @media screen and (max-width: 500px)  {
     .card {
         flex-direction: column;
